@@ -1,0 +1,158 @@
+<!-- # Question: create a mini project for me my portfolio in html -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Adarsh — Mini Portfolio</title>
+  <meta name="description" content="Mini portfolio showcasing projects, skills and contact info." />
+  <style>
+    :root{--bg:#0f1724;--card:#0b1320;--muted:#94a3b8;--accent:#60a5fa;--glass: rgba(255,255,255,0.04)}
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,'Helvetica Neue',Arial;color:#e6eef8;background:linear-gradient(180deg,#071021 0%, #081426 60%);}
+    a{color:var(--accent);text-decoration:none}
+    .container{max-width:1000px;margin:36px auto;padding:24px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{width:56px;height:56px;border-radius:10px;background:linear-gradient(135deg,#1e3a8a,#06b6d4);display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:20px}
+    nav ul{display:flex;gap:12px;list-style:none;padding:0;margin:0}
+    .hero{display:grid;grid-template-columns:1fr auto;gap:20px;align-items:center;margin:28px 0}
+    .hero h1{margin:0;font-size:34px}
+    .hero p{color:var(--muted);margin:8px 0 0}
+    .cta{margin-top:16px}
+    .btn{background:var(--accent);color:white;padding:10px 14px;border-radius:8px;border:0;cursor:pointer}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;border-radius:12px;margin-bottom:16px;border:1px solid rgba(255,255,255,0.03)}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+    .projects .project{padding:12px;border-radius:10px;background:var(--glass);border:1px solid rgba(255,255,255,0.03)}
+    footer{margin-top:28px;padding:18px;text-align:center;color:var(--muted);font-size:14px}
+    .skills{display:flex;flex-wrap:wrap;gap:8px}
+    .skill{background:rgba(255,255,255,0.03);padding:6px 10px;border-radius:999px;border:1px solid rgba(255,255,255,0.02);font-size:14px}
+    /* Responsive tweaks */
+    @media (max-width:720px){.hero{grid-template-columns:1fr;}.logo{width:48px;height:48px}}
+    /* small utilities */
+    .muted{color:var(--muted)}
+    .mono{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, 'Roboto Mono', monospace}
+    .project-title{font-weight:700;margin:0}
+    .project-desc{margin:6px 0 12px;color:var(--muted);font-size:14px}
+    .project-links{display:flex;gap:8px}
+    .ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:8px 10px;border-radius:8px;color:var(--muted);cursor:pointer}
+    .tag{display:inline-block;background:rgba(255,255,255,0.03);padding:6px 8px;border-radius:6px;border:1px solid rgba(255,255,255,0.02);font-size:12px;color:var(--muted)}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">AP</div>
+        <div>
+          <div style="font-weight:700">Adarsh Pandey</div>
+          <div class="muted" style="font-size:13px">Student • Developer • AI enthusiast</div>
+        </div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div>
+        <h1>Hi — I’m Adarsh. I build small AI & embedded projects.</h1>
+        <p class="muted">This mini portfolio demonstrates a clean single-file HTML/CSS portfolio you can host on GitHub Pages. Use it to show projects, skills and contact info.</p>
+        <div class="cta">
+          <a class="btn" href="#projects">View projects</a>
+          <a class="ghost" style="margin-left:8px" href="https://github.com/Adarsh5016" target="_blank">GitHub Profile</a>
+        </div>
+      </div>
+      <div class="card mono">
+        <div style="font-size:12px;color:var(--muted)">Quick links</div>
+        <div style="margin-top:10px;display:flex;gap:8px;flex-wrap:wrap">
+          <div class="tag">HTML</div>
+          <div class="tag">CSS</div>
+          <div class="tag">JavaScript</div>
+          <div class="tag">GitHub Pages</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2 style="margin-bottom:6px">Projects</h2>
+      <p class="muted" style="margin-top:0">A few highlights — link to live demos and repositories.</p>
+
+      <div class="grid projects">
+        <div class="project card">
+          <div class="project-title">AI Traffic Module (Demo)</div>
+          <div class="project-desc">Siren detection + YOLOv8 object detection for emergency vehicle prioritization. Embedded-ready prototype for Raspberry Pi.</div>
+          <div class="project-links">
+            <a class="ghost" href="https://github.com/Adarsh5016/ai-traffic-module" target="_blank">Repo</a>
+            <a class="ghost" href="#" target="_blank">Live</a>
+          </div>
+        </div>
+
+        <div class="project card">
+          <div class="project-title">Siren Sound Detector</div>
+          <div class="project-desc">A lightweight audio detector using FFT and thresholding to flag siren-like audio events. Good for edge devices.</div>
+          <div class="project-links">
+            <a class="ghost" href="https://github.com/Adarsh5016/siren-detector" target="_blank">Repo</a>
+            <a class="ghost" href="#">Demo</a>
+          </div>
+        </div>
+
+        <div class="project card">
+          <div class="project-title">Portfolio Website</div>
+          <div class="project-desc">This single-file portfolio (HTML/CSS) intended to be hosted on GitHub Pages — minimal and fast.</div>
+          <div class="project-links">
+            <a class="ghost" href="https://github.com/Adarsh5016/portfolio" target="_blank">Repo</a>
+            <a class="ghost" href="#">Live</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" style="margin-top:18px">
+      <h2>Skills</h2>
+      <div class="skills" style="margin-top:12px">
+        <div class="skill">Python</div>
+        <div class="skill">Computer Vision</div>
+        <div class="skill">Embedded Systems</div>
+        <div class="skill">Git & GitHub</div>
+        <div class="skill">Docker</div>
+        <div class="skill">SQL</div>
+      </div>
+    </section>
+
+    <section id="contact" style="margin-top:18px">
+      <h2>Contact</h2>
+      <div class="card" style="display:flex;flex-direction:column;gap:8px;">
+        <div class="muted">Want to collaborate or see the code? Reach out:</div>
+        <div style="display:flex;gap:8px;flex-wrap:wrap">
+          <a class="btn" href="mailto:(replace-with-your-email)">Email me</a>
+          <a class="ghost" href="https://www.linkedin.com/in/adarsh-pandey-96a840256" target="_blank">LinkedIn</a>
+          <a class="ghost" href="https://github.com/Adarsh5016" target="_blank">GitHub</a>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      Built with ❤️ — Customize this file and push to <span class="mono">gh-pages</span> branch to host on GitHub Pages.
+    </footer>
+  </div>
+
+  <script>
+    // Small enhancement: smooth scrolling for internal links
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', e=>{
+        e.preventDefault();
+        const t = document.querySelector(a.getAttribute('href'));
+        if(t) t.scrollIntoView({behavior:'smooth',block:'start'});
+      })
+    })
+
+    // Helpful note shown in console for reviewers
+    console.log("Portfolio: edit this file, replace Adarsh5016 and adarsh-pandey-96a840256, then push to GitHub.");
+  </script>
+</body>
+</html>
